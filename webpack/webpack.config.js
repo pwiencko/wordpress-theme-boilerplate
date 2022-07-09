@@ -8,10 +8,13 @@ const exported = {};
 
 exported.mode = "development";
 
-exported.entry = "../src/js/theme.js";
+exported.entry = {
+  libs: ['../src/js/libs.js'],
+  app: ["../src/js/theme.js"]
+};
 
 exported.output = {
-  filename: "theme.bundle.js",
+  filename: "[name].bundle.js",
   path: resolve(__dirname, "../assets/js"),
 };
 
