@@ -1,5 +1,6 @@
 <?php
 
+    require_once( __DIR__ . '/vendor/autoload.php' );
     include('includes/plugins.php');
     include('includes/scripts.php');
     include('includes/stylesheets.php');

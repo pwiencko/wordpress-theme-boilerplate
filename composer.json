@@ -1,0 +1,15 @@
+{
+    "name": "wiencko/wordpress-theme-boilerplate",
+    "autoload": {
+        "psr-4": {
+            "Wiencko\\WordpressThemeBoilerplate\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Przemysław Wiencko",
+            "email": "przemyslaw@wiencko.pl"
+        }
+    ],
+    "require": {}
+}
