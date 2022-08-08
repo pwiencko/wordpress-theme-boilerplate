@@ -9,8 +9,8 @@ const exported = {};
 exported.mode = "development";
 
 exported.entry = {
-  libs: ['../src/js/libs.js'],
-  app: ["../src/js/theme.js"]
+  libs: ['./src/js/libs.js'],
+  app: ["./src/js/theme.js"]
 };
 
 exported.output = {
@@ -50,11 +50,11 @@ module.exports = (env) => {
   if (env.envi == "prod") {
 	exported.mode = 'production';
 
-    exported.plugins.push(
-      new PurgeCSSPlugin({
-        paths: glob.sync(resolve(__dirname, "../*.php")),
-      })
-    );
+    // exported.plugins.push(
+    //   new PurgeCSSPlugin({
+    //     paths: glob.sync(resolve(__dirname, "../*.php")),
+    //   })
+    // );
   }
   return exported;
 };
