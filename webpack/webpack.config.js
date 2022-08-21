@@ -9,8 +9,8 @@ const exported = {};
 exported.mode = "development";
 
 exported.entry = {
-  libs: ['./src/js/libs.js'],
-  app: ["./src/js/theme.js"]
+  libs: ["./src/js/libs.js"],
+  app: ["./src/js/theme.js"],
 };
 
 exported.output = {
@@ -35,10 +35,14 @@ exported.module = {
             publicPath: resolve(__dirname, "../assets/css"),
           },
         },
-        "css-loader",
+        {
+          loader: 'css-loader',
+          options: { url: false }
+        },
         "sass-loader",
       ],
     },
+
   ],
 };
 
@@ -48,7 +52,7 @@ exported.optimization = {
 
 module.exports = (env) => {
   if (env.envi == "prod") {
-	exported.mode = 'production';
+    exported.mode = "production";
 
     // exported.plugins.push(
     //   new PurgeCSSPlugin({
